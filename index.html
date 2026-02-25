@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koala - Gli Animali Affettuosi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 50px 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header p {
+            font-size: 1.3em;
+            color: #555;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .gallery-caption {
+            padding: 15px;
+            text-align: center;
+            background: white;
+            color: #333;
+        }
+
+        .description {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .fact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .fact h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .fact p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .music-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .audio-player {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-player h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .characteristics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .char-item {
+            background: white;
+            padding: 20px;
+            border-left: 5px solid #764ba2;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .char-item h4 {
+            color: #764ba2;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐨 Koala 🐨</h1>
+            <p>Gli Animali Più Affettuosi del Pianeta</p>
+        </header>
+
+        <div class="content">
+            <!-- Sezione Galleria Immagini -->
+            <div class="section">
+                <h2>Galleria di Immagini</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1540573133985-87b6da7feae0?w=500" alt="Koala carino">
+                        <div class="gallery-caption">Koala nel suo ambiente naturale</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1551627765-02e3d66c64e3?w=500" alt="Koala affettuoso">
+                        <div class="gallery-caption">Mamma koala con il suo cucciolo</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1577331297226-9eb6f1f3ce66?w=500" alt="Koala dolce">
+                        <div class="gallery-caption">Koala che riposa tranquillamente</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1611689342806-0863700ce1da?w=500" alt="Koala giocherellone">
+                        <div class="gallery-caption">Koala esploratore sull'albero</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1598351668646-d0fd03c8e5e1?w=500" alt="Koala tenero">
+                        <div class="gallery-caption">Primo piano del volto adorabile</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1506582426273-b1354ad4e5ef?w=500" alt="Koala famiglia">
+                        <div class="gallery-caption">Koala in famiglia</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Descrizione -->
+            <div class="section">
+                <h2>Chi sono i Koala?</h2>
+                <div class="description">
+                    <p>I koala sono marsupiali affettuosi e dolcissimi originari dell'Australia. Nonostante il loro aspetto di "orsetto di peluche", non sono affatto orsi, ma appartengono alla famiglia dei diprotodontidi. Questi incredibili animali hanno una natura gentile e sono noti per essere estremamente affettuosi, specialmente con i loro cuccioli e fra di loro.</p>
+                    <br>
+                    <p>Il nome "koala" significa "non bere" nella lingua degli aborigeni australiani, poiché questi animali ricavano la maggior parte dell'acqua di cui hanno bisogno dalle foglie di eucalipto, il loro cibo principale. I koala trascorrono la maggior parte del loro tempo sugli alberi, dormendo fino a 22 ore al giorno per conservare l'energia, e sono felicissimi quando vengono accarezzati e coccolati.</p>
+                </div>
+            </div>
+
+            <!-- Sezione Caratteristiche -->
+            <div class="section">
+                <h2>Le Caratteristiche Principali</h2>
+                <div class="characteristics">
+                    <div class="char-item">
+                        <h4>🎂 Longevità</h4>
+                        <p>Vivono 12-18 anni in natura, fino a 20 in cattività. Un'intera vita per essere teneri!</p>
+                    </div>
+                    <div class="char-item">
+                        <h4>💤 Sonno</h4>
+                        <p>Dormono fino a 22 ore al giorno, uno dei record tra gli animali terrestri.</p>
+                    </div>
+                    <div class="char-item">
+                        <h4>🌿 Alimentazione</h4>
+                        <p>Mangiano principalmente foglie di eucalipto, con preferenza per 30 specie su 500.</p>
+                    </div>
+                    <div class="char-item">
+                        <h4>👶 Cuccioli</h4>
+                        <p>Nascono piccolissimi e rimangono nella tasca della madre per 6 mesi.</p>
+                    </div>
+                    <div class="char-item">
+                        <h4>💪 Forza</h4>
+                        <p>Hanno artigli potenti per arrampicarsi sugli alberi senza fatica.</p>
+                    </div>
+                    <div class="char-item">
+                        <h4>❤️ Affetto</h4>
+                        <p>Estremamente affettuosi e socievoli con la loro famiglia e gli amici umani!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Fatti Interessanti -->
+            <div class="section">
+                <h2>Fatti Affascinanti sui Koala</h2>
+                <div class="facts">
+                    <div class="fact">
+                        <h3>🦥 Metabolismo Lento</h3>
+                        <p>Il loro metabolismo è uno dei più lenti del regno animale, il che permette loro di dormire molto e conservare energia.</p>
+                    </div>
+                    <div class="fact">
+                        <h3>👃 Olfatto Straordinario</h3>
+                        <p>Hanno un senso dell'olfatto incredibile che usano per scegliere quale eucalipto mangiare.</p>
+                    </div>
+                    <div class="fact">
+                        <h3>🔤 Impronte Digitali</h3>
+                        <p>Come gli umani, i koala hanno impronte digitali uniche, usate dagli scienziati per identificarli.</p>
+                    </div>
+                    <div class="fact">
+                        <h3>🗣️ Comunicazione</h3>
+                        <p>I maschi emettono vocalizzazioni profonde e potenti per comunicare tra loro durante il periodo riproduttivo.</p>
+                    </div>
+                    <div class="fact">
+                        <h3>🌍 Habitat Limitato</h3>
+                        <p>Si trovano solo lungo la costa orientale e nord-orientale dell'Australia, in foreste di eucalipto.</p>
+                    </div>
+                    <div class="fact">
+                        <h3>⚠️ Status di Conservazione</h3>
+                        <p>Classificati come vulnerabili; la perdita di habitat è la loro minaccia principale.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Musica -->
+            <div class="section">
+                <div class="music-section">
+                    <h2 style="color: #764ba2; border-bottom: 3px solid #764ba2; padding-bottom: 10px;">🎵 Musica per Koala</h2>
+                    
+                    <div class="audio-player">
+                        <h3>Suoni Naturali dell'Habitat Koala</h3>
+                        <p>Rilassati ascoltando i suoni della foresta pluviale australiana dove vivono i koala</p>
+                        <audio controls>
+                            <source src="https://www.soundly.com/downloads/rainforest-ambience-1.mp3" type="audio/mpeg">
+                            Il tuo browser non supporta l'elemento audio.
+                        </audio>
+                    </div>
+
+                    <div class="audio-player">
+                        <h3>Vocalizzazioni Naturali dei Koala</h3>
+                        <p>Ascolta i dolci suoni che i koala emettono per comunicare tra loro</p>
+                        <audio controls>
+                            <source src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Phascolarctos-cinereus.ogg" type="audio/ogg">
+                            Il tuo browser non supporta l'elemento audio.
+                        </audio>
+                    </div>
+
+                    <div class="audio-player">
+                        <h3>Musica Rilassante Ispirata alla Natura</h3>
+                        <p>Una composizione dolce perfetta per meditare come farebbe un koala</p>
+                        <audio controls>
+                            <source src="https://www.soundly.com/downloads/peaceful-rain-in-forest.mp3" type="audio/mpeg">
+                            Il tuo browser non supporta l'elemento audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Comportamento Affettuoso -->
+            <div class="section">
+                <h2>Il Comportamento Affettuoso dei Koala</h2>
+                <div class="description">
+                    <p><strong>I koala sono animali straordinariamente affettuosi!</strong> Ecco alcuni comportamenti che dimostrano il loro amore:</p>
+                    <ul style="margin-left: 20px; margin-top: 15px; line-height: 2;">
+                        <li>✨ <strong>Abbracci:</strong> I koala adorano abbracciare gli oggetti e le persone che amano, tenendoli stretto con forza.</li>
+                        <li>💙 <strong>Contatto Fisico:</strong> Cercano costantemente il contatto con la loro madre e il primo contatto con i cuccioli è fondamentale.</li>
+                        <li>🤗 <strong>Coccole:</strong> Si lasciano accarezzare volentieri e dimostrano piacere quando vengono toccati dolcemente.</li>
+                        <li>👂 <strong>Ascolto:</strong> Ascoltano attentamente i suoni e le vocalizzazioni dei loro familiari.</li>
+                        <li>🫂 <strong>Protezione Familiare:</strong> La mamma koala è straordinariamente protettiva e affettuosa con i suoi piccoli.</li>
+                        <li>💝 <strong>Fedeltà:</strong> I koala rimangono fedeli ai loro compagni e mantengono forti legami familiari.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sezione Conservazione -->
+            <div class="section">
+                <h2>Come Possiamo Aiutare i Koala?</h2>
+                <div class="description">
+                    <p><strong>I koala hanno bisogno del nostro aiuto!</strong> Ecco cosa puoi fare:</p>
+                    <ul style="margin-left: 20px; margin-top: 15px; line-height: 2;">
+                        <li>🌳 Supportare la protezione delle foreste di eucalipto in Australia</li>
+                        <li>♻️ Ridurre l'impronta ecologica personale per combattere il cambiamento climatico</li>
+                        <li>💰 Donare a organizzazioni dedicate alla conservazione dei koala</li>
+                        <li>📚 Educare altri sulla situazione dei koala e sulla loro importanza</li>
+                        <li>🚫 Evitare prodotti che contribuiscono alla deforestazione</li>
+                        <li>🌱 Supportare programmi di riforestazione in Australia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 - Una celebrazione dei koala, gli animali affettuosi più dolci del mondo 🐨❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
